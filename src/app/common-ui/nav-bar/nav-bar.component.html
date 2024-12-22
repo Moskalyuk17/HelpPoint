@@ -1,0 +1,33 @@
+<header class="navbar">
+  <nav class="menu container">
+
+    <a href="../src/app/app.component.html" class="logo">
+      <img src="/assets/img/HelpPoit_logo_white.png" alt="Logo Company" class="logo-company">
+      <span class="logo_name">HelpPoint</span>
+    </a>
+
+    <section class="request">
+      <a href="" class="request_create">отправить запрос</a>
+      <a href=" " class="request_my">мои запросы</a>
+    </section>
+
+    <section class="select" [attr.data-state]="isActive ? 'active' : ''">
+      <div class="select_title" (click)="toggleMenu()">
+        {{ selectedTitle }}
+      </div>
+      <div class="select_options">
+        <div class="select_text">
+          <div
+            class="select_label"
+            *ngFor="let option of labels"
+            (click)="selectOption(option)"
+          >
+            {{ option.label }}
+          </div>
+        </div>
+      </div>
+    </section>
+  </nav>
+</header>
+
+

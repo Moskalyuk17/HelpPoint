@@ -1,0 +1,120 @@
+.greeting {
+  background-color: #0F1923;
+
+  .greeting_user {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    height: 52vh;
+    color: white;
+
+    &_text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      grid-column: span 2;
+
+      &_span {
+        display: inline-block;
+        align-self: start;
+        width: auto;
+        font-family: Poppins, sans-serif;
+        font-size: 64px;
+        font-weight: 600;
+
+        &_logo {
+          display: inline-flex;
+          width: 10ch;
+          font-family: Roboto Mono, monospace;
+          font-weight: 600;
+          font-size: 64px;
+          white-space: nowrap;
+          overflow: hidden;
+          border-right: 3px solid white;
+          animation: cursor .35s step-end infinite ,
+          printed_text 2.5s steps(29);
+
+          @keyframes  cursor {
+            0% {
+              border-color: #fff;
+            }
+
+            50% {
+              border-color: transparent;
+            }
+
+            100% {
+              border-color: #fff;
+            }
+          }
+
+          @keyframes printed_text {
+            from {
+              width: 0;
+            }
+            to {
+              width: 10ch;
+            }
+          }
+        }
+      }
+
+      &_ref {
+        display: inline-block;
+        background: #fff;
+        padding: 14px;
+        margin: 25px 0;
+        color: #000;
+        border-radius: 4px;
+        border: 2px solid #fff;
+        text-align: center;
+        align-self: start;
+        width: auto;
+        font-family: Inter, sans-serif;
+        font-weight: 500;
+        font-size: 22px;
+
+        &:hover {
+          border: 2px solid transparent;
+          background: linear-gradient(#fff, #fff 0) padding-box,
+          linear-gradient(to right, rgba(13, 138, 194, 1), rgba(15,25,35,1)) border-box;
+        }
+      }
+    }
+
+    &_foto {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+
+      img {
+        max-width: 100%;
+        min-width: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+}
+
+.complaints {
+  background: grey;
+
+  &_info {
+    &_text {
+
+      &_h3 {
+
+      }
+
+      ol {
+        list-style: none;
+      }
+    }
+  }
+}
+
+
+
+
+
