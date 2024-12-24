@@ -2,6 +2,14 @@
   font-display: swap;
   font-family: Inter;
   font-style: normal;
+  font-weight: 300;
+  src: url("/assets/fonts/Inter/Inter_18pt-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: Inter;
+  font-style: normal;
   font-weight: 400;
   src: url("/assets/fonts/Inter/Inter_18pt-Regular.ttf") format("truetype");
 }
@@ -12,6 +20,14 @@
   font-style: normal;
   font-weight: 500;
   src: url("/assets/fonts/Inter/Inter_18pt-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 600;
+  src: url("/assets/fonts/Inter/Inter_18pt-SemiBold.ttf") format("truetype");
 }
 
 @font-face {

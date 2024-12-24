@@ -1,0 +1,87 @@
+.footer {
+  background: #111111;
+  color: #fff;
+
+  &_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    padding: 20px 0;
+
+    .footer_flex {
+      display: flex;
+      flex-direction: column;
+
+      .logo {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        max-width: 150px;
+
+        &-company {
+          position: relative;
+          margin-left: -12px;
+          display: flex;
+          max-width: 60px;
+        }
+
+        &_name {
+          position: relative;
+          margin-left: -12px;
+          color: white;
+          font-family: Roboto Mono, monospace;
+          font-weight: 600;
+          font-size: 14px;
+        }
+      }
+
+      .footer_copyright_text {
+        color: #f1f5f0;
+        font-family: Inter, sans-serif;
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 300;
+      }
+
+      .footer_h3 {
+        font-family: Inter, sans-serif;
+        font-size: 20px;
+        line-height: 24px;
+        font-weight: 600;
+        margin: 20px 0;
+      }
+
+      .footer_link {
+        color: #999899;
+        font-family: inter, sans-serif;
+        font-size: 16px;
+        line-height: 34px;
+        font-weight: 400;
+
+        &:hover {
+          color: #BCBCBC;
+        }
+      }
+
+      .tg:hover {
+        color: #27A7E7;
+      }
+
+      .vk:hover {
+        color: #0077FF;
+      }
+
+      .yt:hover {
+        color: #FF0033;
+      }
+
+      .x:hover {
+        color: #fff;
+      }
+
+      .tw:hover {
+        color: #9244FF;
+      }
+    }
+  }
+}
