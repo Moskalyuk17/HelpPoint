@@ -98,17 +98,98 @@
 }
 
 .complaints {
-  background: grey;
+  background: #F5F5F5;
 
-  &_info {
-    &_text {
+  &_grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    .complaints_text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 80%;
+      font-family: Inter, sans-serif;
 
       &_h3 {
-
+        margin: 20px 0;
+        font-size: 40px;
+        font-weight: 700;
       }
 
-      ol {
+      &_list {
+        counter-reset: li;
         list-style: none;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+
+        li {
+          position: relative;
+          margin-left: 10px;
+
+
+          &::before {
+            content: counter(li, decimal) ". ";
+            counter-increment: li;
+          }
+        }
+      }
+    }
+
+    .complaints_block {
+      display: flex;
+      justify-content: space-between;
+
+      .enquiry {
+        margin-left: 50px;
+      }
+
+      .complaints_card {
+        border: 2px solid transparent;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        max-width: 300px;
+        display: flex;
+        flex-direction: column;
+        margin: 20px auto;
+
+        &:hover {
+          border: 2px solid transparent;
+          background: linear-gradient(#fff, #fff 0) padding-box,
+          linear-gradient(to bottom, rgba(13, 138, 194, 1), rgba(200,200,200,1)) border-box;
+        }
+
+        img {
+          width: 100%;
+          height: 200px;
+          object-fit: cover;
+        }
+
+        &_content {
+          padding: 40px;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          font-family: Inter, sans-serif;
+
+          h3 {
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 24px;
+            color: #000;
+          }
+
+          p {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 22px;
+            color: #555;
+            line-height: 1.4;
+          }
+        }
       }
     }
   }
